@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import { useGSAP } from "@gsap/react";
 import { fadeAnimation } from "@/utils/title-animation";
+import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { ArrowBg, RightArrowTwo } from "../svg";
 
@@ -34,7 +32,7 @@ const HeroBannerOne = () => {
                 Creative
                 <span className="tp-hero-subtitle hidden lg:block font-gilroy">
                   Hi There
-                  <br /> We're
+                  <br /> We&apos;re
                 </span>
                 <span className="tp-hero-shape-2 hidden md:inline-block">
                   <img
@@ -71,7 +69,7 @@ const HeroBannerOne = () => {
             className="tp-btn-black-2 group font-gilroy mx-auto"
             href="/contact"
           >
-            Let's Connect
+            Let&apos;s Connect
             <span className="relative">
               <RightArrowTwo />
               <ArrowBg />

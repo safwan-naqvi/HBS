@@ -1,9 +1,8 @@
 "use client";
 import BackToTop from "@/components/back-to-top";
 import React from "react";
-import Header from "./headers/header";
 import Footer from "./footers/footer";
-import HeaderOne from "./headers/header-one";
+import Header from "./headers/header";
 
 // if (typeof window !== "undefined") {
 //   require("bootstrap/dist/js/bootstrap.bundle.min");

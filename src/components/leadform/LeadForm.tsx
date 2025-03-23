@@ -22,8 +22,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
-import { FaArrowRightLong } from "react-icons/fa6";
+
+import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
   fullname: z.string().min(2, {
@@ -110,20 +110,23 @@ export function LeadForm() {
   const { toast } = useToast();
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-8 pl-8 py-10"
+      >
         <FormField
           control={form.control}
           name="fullname"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-md font-semibold text-black tracking-tight">
+              <FormLabel className="text-sm text-black font-gilroy uppercase">
                 Full Name
               </FormLabel>
               <FormControl>
                 <Input
-                  placeholder="Saim Abbas"
+                  placeholder="Muhammad"
                   {...field}
-                  className="text-md md:text-xl font-light tracking-tight"
+                  className="!text-lg font-light"
                 />
               </FormControl>
               <FormMessage />
@@ -136,7 +139,7 @@ export function LeadForm() {
             name="companyName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md font-semibold text-black tracking-tight">
+                <FormLabel className="text-sm text-black font-gilroy uppercase">
                   Company Name
                 </FormLabel>
                 <FormControl>
@@ -155,7 +158,7 @@ export function LeadForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md font-semibold text-black tracking-tight">
+                <FormLabel className="text-sm text-black font-gilroy uppercase">
                   Username
                 </FormLabel>
                 <FormControl>
@@ -174,7 +177,7 @@ export function LeadForm() {
             name="service"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md font-semibold text-black tracking-tight">
+                <FormLabel className="text-sm text-black font-gilroy uppercase">
                   Service
                 </FormLabel>
                 <Select
@@ -185,7 +188,7 @@ export function LeadForm() {
                     <SelectTrigger>
                       <SelectValue
                         placeholder="Choose Service"
-                        className="text-md md:text-xl font-light tracking-tight"
+                        className="text-lg font-light tracking-tight"
                       />
                     </SelectTrigger>
                   </FormControl>
@@ -209,7 +212,7 @@ export function LeadForm() {
             name="range"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-md md:text-xl font-semibold text-black tracking-tight">
+                <FormLabel className="text-sm text-black font-gilroy uppercase">
                   Range
                 </FormLabel>
                 <Select
@@ -220,7 +223,7 @@ export function LeadForm() {
                     <SelectTrigger>
                       <SelectValue
                         placeholder="Your Budget"
-                        className="text-md md:text-xl font-light tracking-tight"
+                        className="text-lg font-light"
                       />
                     </SelectTrigger>
                   </FormControl>
@@ -249,7 +252,7 @@ export function LeadForm() {
               <FormControl>
                 <Textarea
                   placeholder="Tell us a little bit about Project"
-                  className="resize-none text-md md:text-md font-light tracking-tight"
+                  className="resize-none text-lg"
                   {...field}
                 />
               </FormControl>
@@ -257,7 +260,15 @@ export function LeadForm() {
             </FormItem>
           )}
         />
-        <button
+        <button type="submit" className="tp-service-left-btn tp-btn-bounce">
+          <div className="tp-btn-border">
+            <span className="tp-btn-border-wrap">
+              <span className="text-1">See All Services</span>
+              <span className="text-2">See All Services</span>
+            </span>
+          </div>
+        </button>
+        {/* <button
           type="submit"
           className="relative group rounded-full h-40 w-40 p-3 bg-[#037DE9] hover:bg-[#0070D2] box-border transition-all text-md font-light tracking-tight"
         >
@@ -267,7 +278,7 @@ export function LeadForm() {
             className="animate-spin-slow group-hover:animate-spin-slow-reverse"
           />
           <FaArrowRightLong className="absolute rotate-45 group-hover:rotate-0 transition-all top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-10 w-10" />
-        </button>
+        </button> */}
       </form>
     </Form>
   );

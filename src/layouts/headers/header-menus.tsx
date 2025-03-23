@@ -1,7 +1,6 @@
-import React, { CSSProperties } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import menu_data from "@/data/menu-data";
+import Link from "next/link";
+import { CSSProperties } from "react";
 
 const imgStyle: CSSProperties = {
   width: "100%",

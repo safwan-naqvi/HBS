@@ -1,5 +1,3 @@
-import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 // service <imgs
@@ -80,7 +78,7 @@ const ServiceOne = () => {
           </div>
           <div className="col-span-2 lg:col-span-1">
             <div className="tp-service-right-wrap">
-              {service_data.map((s, i) => (
+              {service_data.map((s) => (
                 <div
                   key={s.id}
                   className="tp-service-item flex items-start mb-20 gap-8 tp_fade_bottom"

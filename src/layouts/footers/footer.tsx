@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect } from "react";
+import Icons from "@/icons/IconSet";
+import { footerOneAnimation } from "@/utils/footer-anim";
 import Image from "next/image";
 import Link from "next/link";
-import { footerOneAnimation, footerTwoAnimation } from "@/utils/footer-anim";
-import Icons from "@/icons/IconSet";
+import React, { useEffect } from "react";
 
 const footer_links = [
   { link: "/portfolio-details-1", title: "Projects" },

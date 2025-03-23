@@ -12,6 +12,7 @@ import BrandOne from "@/components/brand/brand-one";
 
 // animation
 import HeroBannerOne from "@/components/hero-banner/hero-banner-one";
+import { LeadForm } from "@/components/leadform/LeadForm";
 import Portfolio from "@/components/PortfolioShowcase/portfolio-gallery";
 import ProjectOne from "@/components/project/project-one";
 import ServiceOne from "@/components/service/service-one";
@@ -27,6 +28,7 @@ import {
   fadeAnimation,
 } from "@/utils/title-animation";
 import { videoAnimOne } from "@/utils/video-anim";
+import Image from "next/image";
 
 const Homepage = () => {
   useScrollSmooth();
@@ -126,6 +128,37 @@ const Homepage = () => {
       <Portfolio />
       <TeamOne />
       <TestimonialOne />
+      <div className="relative grid grid-cols-1 md:grid-cols-2 w-full gap-20 px-10 lg:px-20 text-white pt-40 pb-40 gradient-wave shadow-sm bg-[#f7f6f6]">
+        <div className="z-50">
+          <h2 className="text-[#111] text-3xl md:text-7xl font-semibold">
+            Have a Project Idea?
+          </h2>
+          <p className="mt-4 text-xl">
+            We&apos;ll schedule a call to discuss your idea. After discovery
+            sessions, we&apos;ll send a proposal, and upon approval, we&apos;ll
+            get started.
+          </p>
+          <div className="mt-8 py-6 px-8 max-w-96 rounded-2xl shadow-sm text-[#222] bg-[#a4a4a4] flex flex-col items-start gap-8 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100">
+            <span className="text-2xl font-bold">
+              Not Interested to submit the form?
+            </span>
+            <div className="flex items-center justify-between w-full">
+              <Image
+                src={"/assets/img/team/meeting.webp"}
+                height={40}
+                width={100}
+                alt="Meeting CTA HBS"
+              />
+              <button className="rounded-full px-6 py-4 bg-[#1769ba] hover:bg-[#419ffc] font-gilroy font-semibold self-end text-white">
+                Book A Call Directly
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="z-50">
+          <LeadForm />
+        </div>
+      </div>
       {/*     <AwardOne />
             <Portfolio /> */}
     </main>

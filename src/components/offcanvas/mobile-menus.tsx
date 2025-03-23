@@ -1,7 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import menu_data from "@/data/menu-data";
+import Link from "next/link";
+import React from "react";
 
 export default function MobileMenus() {
   const [navTitle, setNavTitle] = React.useState<string>("");

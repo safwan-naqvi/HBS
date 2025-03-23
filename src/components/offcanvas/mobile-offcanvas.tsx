@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
 
 // images

@@ -1,7 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import { CloseThree, CloseTwo } from "../svg";
 import Link from "next/link";
+import React from "react";
+import { CloseThree, CloseTwo } from "../svg";
 import MobileMenusTwo from "./mobile-menus-2";
 
 // prop type

@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
-import { SwiperOptions } from "swiper/types";
 import team_data from "@/data/team-data";
+import React from "react";
+import { Autoplay, FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperOptions } from "swiper/types";
 
 import { ITeamDT } from "@/types/team-d-t";
 import TeamItem from "./team-item";
@@ -12,11 +12,11 @@ import TeamItem from "./team-item";
 const slider_setting: SwiperOptions = {
   slidesPerView: 6,
   loop: true,
-  autoplay: false,
+  autoplay: true,
   spaceBetween: 30,
   breakpoints: {
     "1400": {
-      slidesPerView: 6,
+      slidesPerView: 5,
     },
     "1200": {
       slidesPerView: 4,
